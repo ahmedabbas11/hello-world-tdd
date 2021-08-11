@@ -34,4 +34,22 @@ public class WordCounterTest {
         int count = wordCount.count(phrase);
         Assertions.assertEquals(3 , count);
     }
+
+    @Test
+    public void test_count_words_separated_by_comma_and_space(){
+        WordCount wordCount = new WordCount();
+        String phrase = "Ahmed, mohamed,Elsafty";
+
+        int count = wordCount.count(phrase);
+        Assertions.assertEquals(3 , count);
+    }
+
+    @Test
+    public void test_count_words_separated_by_multiple_space(){
+        WordCount wordCount = new WordCount();
+        String phrase = "Ahmed    mohamed,Elsafty";
+
+        int count = wordCount.count(phrase);
+        Assertions.assertEquals(3 , count);
+    }
 }
