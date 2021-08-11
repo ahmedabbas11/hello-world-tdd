@@ -25,4 +25,13 @@ public class WordCounterTest {
 
         Assertions.assertEquals( 2 , count );
     }
+
+    @Test
+    public void test_count_words_separated_by_comma(){
+        WordCount wordCount = new WordCount();
+        String phrase = "Ahmed,mohamed,Elsafty";
+
+        int count = wordCount.count(phrase);
+        Assertions.assertEquals(3 , count);
+    }
 }
